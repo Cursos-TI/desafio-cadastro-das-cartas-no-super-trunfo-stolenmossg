@@ -72,7 +72,7 @@ int populacao1; //2568928*/
        scanf("%i" , &pontos_turisticos1);
        
 //Inserindo dados da Carta 2      
-       printf("Agora vamos preencher a 2ª carta\n");
+       printf("\nAgora vamos preencher a 2ª carta\n");
 
        printf("Digite o nome da cidade:\n");
        scanf("%s", cidade2);
@@ -96,7 +96,7 @@ int populacao1; //2568928*/
        scanf("%i" , &pontos_turisticos2);
       
 //Nível Aventureiro
-// Cálculos Carta 2
+// Cálculos Carta 1
        densidade1 = populacao1/area_km1;
        pib_per_capita1 = PIB1/populacao1; 
 
@@ -118,7 +118,7 @@ vitoria_pib_per_capita = pib_per_capita1 > pib_per_capita2;
 vitoria_super_poder = super_poder1 > super_poder2;
 
 //informações digitadas para a primeira carta
-       printf("*****Primeira Carta:*****\n %s-%s-%s\n", cod_carta1, cidade1, estado1 );
+       printf("\n*****Primeira Carta:*****\n %s-%s-%s\n", cod_carta1, cidade1, estado1 );
        printf("População: %d habitantes\n", populacao1);
        printf("Área km²: %.2f Km²\n" , area_km1);
        printf("PIB: %.2f Bilhões\n", PIB1);
@@ -128,7 +128,7 @@ vitoria_super_poder = super_poder1 > super_poder2;
        printf("Super Poder: %.2f\n", super_poder1);    
 
 //informações digitadas para a segunda carta
-       printf("*****Segunda Carta:*****\n %s-%s-%s\n", cod_carta2, cidade2, estado2 );
+       printf("\n*****Segunda Carta:*****\n %s-%s-%s\n", cod_carta2, cidade2, estado2 );
        printf("População: %d habitantes \n", populacao2);
        printf("Área km²: %.2f Km²\n" , area_km2);
        printf("PIB: %.2f Bilhões\n", PIB2);
@@ -138,7 +138,7 @@ vitoria_super_poder = super_poder1 > super_poder2;
        printf("Super Poder: %.2f\n", super_poder2);
 
 // comparação das cartas
-       printf("***** Resultado ***** \n");
+       printf("\n***** Resultado ***** \n");
        printf("População:%d\n", vitoria_populacao);
        printf("Área: %d\n",vitoria_area);
        printf("PIB: %d\n", vitoria_pib);
@@ -146,11 +146,27 @@ vitoria_super_poder = super_poder1 > super_poder2;
        printf("Densidade Populacional (menor vence): %d\n", vitoria_densidade);
        printf("PIB per Capita: %d\n", vitoria_pib_per_capita);
        printf("Super Poder: %d\n", vitoria_super_poder);
+//nível mestre 
+// Super Poderes
+printf("\n*****  Resultado dos Super Poderes *****\n");
+printf("Super Poder da Carta 1: %.2f\n", super_poder1);
+printf("Super Poder da Carta 2: %.2f\n", super_poder2);
 
-
+// Comparação final
+printf("\n***** Resultado Final *****\n");
+if (super_poder1 > super_poder2) {
+    printf("A Carta 1 vence com maior Super Poder!\n");
+} else if (super_poder2 > super_poder1) {
+    printf("A Carta 2 vence com maior Super Poder!\n");
+} else {
+    printf("Empate de Super Poder!\n");
+}
+       
 
 return 0;
 
 }
+
+
 
 
